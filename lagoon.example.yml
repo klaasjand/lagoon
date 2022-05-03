@@ -1,0 +1,102 @@
+---
+repositories:
+  - id: almalinux-8_baseos_rsync
+    name: AlmaLinux 8 - BaseOS (rsync)
+    type: rsync
+    src: rsync://rsync.repo.almalinux.org/almalinux/8.5/BaseOS/x86_64/os/
+    dest: /var/lib/lagoon
+    cron: "0 1 20 * * ?"
+    snapshots: 52
+  - id: almalinux-8_baseos_reposync
+    name: AlmaLinux 8 - BaseOS (reposync)
+    type: reposync
+    src: |
+      [almalinux-8-baseos]
+      name=AlmaLinux 8 - BaseOS
+      baseurl=http://repo.almalinux.org/almalinux/8.5/BaseOS/x86_64/os/
+      enabled=1
+      gpgcheck=1
+      gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux
+    dest: /var/lib/lagoon
+    cron: "0 1 21 * * ?"
+    snapshots: 52
+  - id: centos-7_rsync
+    name: CentOS 7 - NLUUG
+    type: rsync
+    src: rsync://ftp.nluug.nl/centoslinux/
+    dest: /var/lib/lagoon
+    cron: "0 1 22 * * ?"
+    snapshots: 52
+    exclude:
+      - HEADER*
+      - dostools
+      - graphics
+      - build
+      - RPM-GPG-KEY-beta
+      - RPM-GPG-KEY-CentOS-3
+      - RPM-GPG-KEY-centos4
+      - RPM-GPG-KEY-CentOS-4
+      - RPM-GPG-KEY-CentOS-5
+      - TIME
+      - timestamp.txt
+      - filelist.gz
+      - dir_sizes
+      - /2
+      - /2.*
+      - 2/
+      - 2.*/
+      - /3
+      - /3.*
+      - 3/
+      - 3.*/
+      - /4
+      - /4.*
+      - 4/
+      - 4.*/
+      - /5
+      - /5.*
+      - 5/
+      - 5.*/
+      - /6
+      - /6.*
+      - 6/
+      - 6.*/
+      - /8
+      - /8.*
+      - 8/
+      - 8.*/
+      - 8-stream/
+      - atomic/
+      - ATOMIC/
+      - i386/
+      - I386/
+      - i686/
+      - I686/
+      - ppc*/
+      - PPC*/
+      - ppc64/
+      - PPC64/
+      - debug/
+      - DEBUG/
+      - isos/
+      - ISOS/
+      - srpms/
+      - SRPMS/
+      - drpms/
+      - DRPMS/
+      - cloud/
+      - CLOUD/
+      - centosplus/
+      - CENTOSPLUS/
+      - paas/
+      - PAAS/
+      - dotnet/
+      - DOTNET/
+      - rt/
+      - RT/
+      - sclo/
+      - SCLO/
+      - storage/
+      - STORAGE/
+      - virt/
+      - VIRT/

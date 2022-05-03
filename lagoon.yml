@@ -1,0 +1,16 @@
+---
+repositories:
+  - id: dummy1
+    name: Dummy Mirror - 1
+    type: dummy
+    src: None
+    dest: /var/lib/lagoon
+    cron: "*/10 * * * * *"
+    snapshots: 52
+  - id: dummy2
+    name: Dummy Mirror - 2
+    type: dummy
+    src: None
+    dest: /var/lib/lagoon
+    cron: "*/12 * * * * *"
+    snapshots: 52
