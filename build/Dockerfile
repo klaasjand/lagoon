@@ -1,7 +1,7 @@
 # Build golang app
 FROM golang:1.17.0-buster AS builder
 
-WORKDIR /go/src/github.com/klaasjand/lagoon-dev
+WORKDIR /go/src/github.com/klaasjand/lagoon
 
 COPY ./ ./
 
@@ -29,5 +29,5 @@ RUN mkdir -p /var/lib/lagoon
 
 WORKDIR /etc/lagoon
 
-COPY --from=builder /go/src/github.com/klaasjand/lagoon-dev/lagoon ./
+COPY --from=builder /go/src/github.com/klaasjand/lagoon/lagoon ./
 CMD ["./lagoon"]

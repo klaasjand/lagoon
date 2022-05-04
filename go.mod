@@ -1,4 +1,4 @@
-module github.com/klaasjand/lagoon-dev
+module github.com/klaasjand/lagoon
 
 go 1.16
 

@@ -10,8 +10,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/klaasjand/lagoon-dev/internal/config"
-	"github.com/klaasjand/lagoon-dev/internal/repository"
+	"github.com/klaasjand/lagoon/internal/config"
+	"github.com/klaasjand/lagoon/internal/repository"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/robfig/cron/v3"
 	"github.com/rs/zerolog"

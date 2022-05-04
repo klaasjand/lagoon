@@ -13,7 +13,7 @@ import (
 
 	"github.com/cenkalti/backoff/v4"
 	"github.com/google/uuid"
-	"github.com/klaasjand/lagoon-dev/internal/remote"
+	"github.com/klaasjand/lagoon/internal/remote"
 	"github.com/pkg/errors"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
