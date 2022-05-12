@@ -5,7 +5,7 @@ updates:
     schedule:
       interval: "weekly"
   - package-ecosystem: "docker"
-    directory: "/build/"
+    directory: "/build"
     schedule:
       interval: "weekly"
   - package-ecosystem: "docker"
