@@ -1,4 +1,4 @@
-FROM golang:1.17.0-buster
+FROM golang:1.18.1-buster
 LABEL maintainer="Klaas Jan Dijksterhuis"
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
@@ -11,13 +11,13 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         createrepo
 
 # goimports updates your Go import lines, adding missing ones and removing unreferenced ones.
-RUN go get -v golang.org/x/tools/cmd/goimports
+RUN go install golang.org/x/tools/cmd/goimports@latest
 # Simple utility for extracting a JSON representation of the declarations in a Go source file.
-RUN go get -v github.com/ramya-rao-a/go-outline
+RUN go install github.com/ramya-rao-a/go-outline@latest
 # gopls provides IDE features, such as as intelligent autocompletion, signature help, refactoring, and workspace symbol search.
-RUN go get -v golang.org/x/tools/gopls
+RUN go install golang.org/x/tools/gopls@latest
 
 # Below tools are needed for the basic features of the Go extension.
-RUN go get -v github.com/uudashr/gopkgs/v2/cmd/gopkgs
-RUN go get -v github.com/go-delve/delve/cmd/dlv
-RUN go get -v honnef.co/go/tools/cmd/staticcheck
+RUN go install github.com/uudashr/gopkgs/v2/cmd/gopkgs@latest
+RUN go install github.com/go-delve/delve/cmd/dlv@latest
+RUN go install honnef.co/go/tools/cmd/staticcheck@latest
