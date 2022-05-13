@@ -158,7 +158,7 @@ func (m *Repo) Sync() {
 		if err != nil {
 			syncLog.Error().Stack().Err(err).Msg("Stopped retrying sync")
 		} else {
-			syncLog.Debug().Msg("Successfull sync")
+			syncLog.Debug().Msg("Successful sync")
 
 			if snapshot, err := m.createSnapshot(); err == nil {
 				if err := m.publishSnapshot(snapshot); err != nil {
