@@ -1,5 +1,7 @@
 # Lagoon - Simple Linux package repository mirror
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/klaasjand/lagoon)](https://goreportcard.com/report/github.com/klaasjand/lagoon)
+
 A lagoon is a shallow stretch of water separated from the sea by a reef or 
 sandbank. Lagoon can be used to mirror package repositories or parts of these 
 repositories from the internet hence the name Lagoon.
