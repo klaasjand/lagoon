@@ -1,5 +1,5 @@
 # Build golang app
-FROM golang:1.18.2-buster AS builder
+FROM golang:1.19.2-buster AS builder
 
 WORKDIR /go/src/github.com/klaasjand/lagoon
 
