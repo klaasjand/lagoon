@@ -1,4 +1,4 @@
-FROM golang:1.18.2-buster
+FROM golang:1.20.1-buster
 LABEL maintainer="Klaas Jan Dijksterhuis"
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
